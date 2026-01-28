@@ -1,4 +1,6 @@
-/* ROOT COLOR SYSTEM (IDENTITAS FISIKA) */
+/* ===============================
+   SISTEM WARNA (IDENTITAS FISIKA)
+================================= */
 :root {
     --navy: #0B1F3A;
     --cyan: #00B4D8;
@@ -16,30 +18,30 @@
 }
 
 body {
-    background-color: var(--white);
+    background: var(--white);
     color: var(--dark);
+    line-height: 1.6;
 }
 
-/* NAVBAR */
-.navbar {
+/* ===============================
+   NAVBAR
+================================= */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 60px;
     background: var(--navy);
     color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 20px;
     font-weight: bold;
-    font-size: 18px;
-}
-
-.logo img {
-    width: 36px;
+    letter-spacing: 0.5px;
 }
 
 nav a {
@@ -54,69 +56,76 @@ nav a:hover {
     color: var(--cyan);
 }
 
-/* HERO SECTION */
+/* ===============================
+   HERO SECTION
+================================= */
 .hero {
     height: 85vh;
-    background: linear-gradient(135deg, var(--navy), #06162c);
     display: flex;
     align-items: center;
     padding: 0 80px;
+    background: linear-gradient(135deg, var(--navy), #06162c);
     color: var(--white);
 }
 
-.hero-text h1 {
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
     font-size: 52px;
     margin-bottom: 16px;
 }
 
-.hero-text p {
+.hero p {
     font-size: 18px;
     margin-bottom: 28px;
-    max-width: 520px;
 }
 
-.btn-primary {
+.btn {
+    display: inline-block;
     padding: 12px 28px;
-    border: none;
-    border-radius: 6px;
     background: var(--cyan);
     color: var(--navy);
+    border-radius: 6px;
+    text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
     transition: 0.3s;
 }
 
-.btn-primary:hover {
+.btn:hover {
     background: #0096c7;
 }
 
-/* ABOUT */
+/* ===============================
+   ABOUT SECTION
+================================= */
 .about {
     padding: 80px 100px;
     text-align: center;
-    background: var(--white);
 }
 
 .about h2 {
     font-size: 32px;
-    margin-bottom: 20px;
     color: var(--navy);
+    margin-bottom: 20px;
 }
 
 .about p {
     max-width: 720px;
     margin: auto;
     font-size: 17px;
-    line-height: 1.6;
 }
 
-/* FEATURES */
+/* ===============================
+   FEATURES / BIDANG
+================================= */
 .features {
+    background: var(--gray);
+    padding: 60px 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
-    padding: 60px 100px;
-    background: var(--gray);
 }
 
 .card {
@@ -137,44 +146,39 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-/* FOOTER */
-.footer {
+/* ===============================
+   FOOTER
+================================= */
+footer {
     background: var(--navy);
     color: var(--white);
     text-align: center;
     padding: 20px;
     font-size: 14px;
 }
-height:480px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
-    align-items: center;
-    border-radius:70px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 900px) {
+    .hero {
+        padding: 80px 40px;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 14px 30px;
+    }
+
+    .about, .features {
+        padding: 60px 40px;
+    }
 }
-
-.img-content {
-width:50%;
-height:50%;
-}
-
-.container-footer {
-    height:10vh;
-    background-color: white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.h1-footer{
-font-size:40px
-}
-
-
-
-
-
-
